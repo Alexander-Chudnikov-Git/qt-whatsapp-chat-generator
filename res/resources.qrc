@@ -1,4 +1,4 @@
 <RCC>
-    <qresource prefix="/generic">
+    <qresource prefix="/">
     </qresource>
 </RCC>

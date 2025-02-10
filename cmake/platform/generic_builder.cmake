@@ -30,7 +30,7 @@ set(PROJECT_LIBRARIES_LIST)
 set(PROJECT_DIRECTORIES_LIST)
 
 # [TRANSLATION]
-set(PROJECT_TS_FILE_DIR "${CMAKE_SOURCE_DIR}/translations/")
+set(PROJECT_TS_FILE_DIR "${CMAKE_SOURCE_DIR}/translations")
 set(PROJECT_TRANSLATION_TARGETS ${PROJECT_NAME})
 file(GLOB PROJECT_TS_FILES CONFIGURE_DEPENDS
     "${PROJECT_TS_FILE_DIR}/*.ts"
@@ -44,7 +44,6 @@ file(GLOB PROJECT_QRC_FILES CONFIGURE_DEPENDS
 # [LIBRARIES]
 include(cmake/libraries/fmt.cmake)
 include(cmake/libraries/spdlog.cmake)
-include(cmake/libraries/opencv.cmake)
 include(cmake/libraries/qt.cmake)
 include(cmake/libraries/qxlsx.cmake)
 include(cmake/libraries/utils.cmake)
@@ -56,16 +55,16 @@ if(MACOS)
 elseif(LINUX)
     include(cmake/platform/linux_builder.cmake)
 else()
-    message(FATAL_ERROR "Unsupported OS: ${CMAKE_SYSTEM_NAME}")
+    include(cmake/platform/windows_builder.cmake)
 endif()
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_standard_project_setup(I18N_TRANSLATED_LANGUAGES en)
     set_property(DIRECTORY ${CMAKE_SOURCE_DIR} PROPERTY QT_EXCLUDE_FROM_TRANSLATION ON)
-    qt_add_translations(${PROJECT_NAME} TS_FILES ${PROJECT_TS_FILES} SOURCE_TARGETS ${PROJECT_TRANSLATION_TARGETS})
+    qt_add_translations(${PROJECT_NAME} TS_FILES ${PROJECT_TS_FILES} ${PROJECT_TRANSLATION_TARGETS})
     add_dependencies(${PROJECT_NAME} update_translations)
 
-    qt_add_resources(${PROJECT_NAME} ${PROJECT_QRC_FILES})
+    qt_add_resources(${PROJECT_NAME} PREFIX "/" ${PROJECT_QRC_FILES})
 else()
     # Implement later
 endif()
