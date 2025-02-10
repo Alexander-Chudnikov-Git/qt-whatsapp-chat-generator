@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Whatsapp Chat Generator
+GenericName=qt-whatsapp-chat-generator
+Comment=Simple qt application for generating fake whatapp messages
+Exec=/usr/local/bin/qt-whatsapp-chat-generator
+Icon=/usr/local/share/icons/hicolor/64x64/apps/qt-whatsapp-chat-generator.svg
+Categories=Utility
