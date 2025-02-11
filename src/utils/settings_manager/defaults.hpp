@@ -54,7 +54,7 @@ constexpr auto        d_fake_chat_battery  = "17";
 constexpr auto        d_fake_chat_name     = "Group Chat";
 
 constexpr auto d_fake_chat_delay       = 150;
-constexpr auto d_fake_screenshot_delay = 200;
+constexpr auto d_fake_screenshot_delay = 150;
 }
 }
 #endif // DEFAULT_HPP

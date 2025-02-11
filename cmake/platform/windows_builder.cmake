@@ -96,55 +96,48 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
 )
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/platforms
-        DESTINATION lib)
+        DESTINATION bin)
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/imageformats
-        DESTINATION lib)
+        DESTINATION bin)
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/generic
-        DESTINATION lib)
+        DESTINATION bin)
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/iconengines
-        DESTINATION lib)
+        DESTINATION bin)
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/networkinformation
-        DESTINATION lib)
+        DESTINATION bin)
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/platforminputcontexts
-        DESTINATION lib)
+        DESTINATION bin)
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/position
-        DESTINATION lib)
+        DESTINATION bin)
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/qml
-        DESTINATION lib)
-
-install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/qmllint
-        DESTINATION lib)
+        DESTINATION bin)
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/qmltooling
-        DESTINATION lib)
+        DESTINATION bin)
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/resources
-        DESTINATION lib)
+        DESTINATION bin)
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/styles
-        DESTINATION lib)
+        DESTINATION bin)
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/tls
-        DESTINATION lib)
+        DESTINATION bin)
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/translations
-        DESTINATION lib)
+        DESTINATION bin)
 
-install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/ 
-        DESTINATION lib 
-        FILES_MATCHING
-        PATTERN "*.dll"
-)
 install(DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/ 
         DESTINATION bin 
         FILES_MATCHING
+        PATTERN "*.dll"
         PATTERN "*.exe"
 )
 
