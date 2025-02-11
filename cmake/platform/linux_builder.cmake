@@ -1,10 +1,14 @@
 include(cmake/utils/get_linux_kernel.cmake)
 include(GNUInstallDirs)
 
-if(CMAKE_RELEASE)
-    set(CMAKE_BUILD_TYPE "Release" CACHE INTERNAL "Build as release" FORCE)
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE "Debug" CACHE INTERNAL "Build as debug" FORCE)
+endif()
+
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
     add_compile_options(
         -fvisibility=hidden
+        -s
         -pedantic
         -Wall
         -Wextra
@@ -31,12 +35,14 @@ if(CMAKE_RELEASE)
         -Ofast
     )
 else()
-    set(CMAKE_BUILD_TYPE "Debug" CACHE INTERNAL "Build as debug" FORCE)
     add_compile_options(
         -Wall
         -Wextra
     )
 endif()
+
+# [THREAD FIX]
+list(APPEND PROJECT_LIBRARIES_LIST pthread)
 
 # [INSTALL RESOURCES DIRECTORY]
 set(PROJECT_INSTALL_DIR "${CMAKE_SOURCE_DIR}/res/install/linux/")

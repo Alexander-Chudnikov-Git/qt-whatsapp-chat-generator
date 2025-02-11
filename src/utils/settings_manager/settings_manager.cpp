@@ -2,107 +2,113 @@
 #include "spdlog_wrapper.hpp"
 #include "defaults.hpp"
 
+#include <QApplication>
+
 
 namespace UTILS
 {
 SettingsManager* SettingsManager::m_instance = nullptr;
 QMutex           SettingsManager::m_mutex;
-const QMap<SettingsManager::Setting, QPair<QString, QVariant>> SettingsManager::m_settings_lookup =
-{
-    {
-        SettingsManager::Setting::WINDOW_RECT,
-        {"window_rect", QRect(0, 0, DEFAULTS::d_window_width, DEFAULTS::d_window_height)}
-    },
-    {
-        SettingsManager::Setting::TRANSLATION_LANG,
-        {"translation_lang", DEFAULTS::d_translator_base_locale}
-    },
-    {
-        SettingsManager::Setting::FAKE_IMAGE_PATH,
-        {"fake_image_path", DEFAULTS::d_fake_image_path}
-    },
-    {
-        SettingsManager::Setting::FAKE_IMAGE_PREFIX,
-        {"fake_image_prefix", DEFAULTS::d_fake_image_prefix}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_PATH,
-        {"fake_chat_path", DEFAULTS::d_fake_chat_path}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_WEBSITE,
-        {"fake_chat_website", DEFAULTS::d_fake_chat_generator}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_ADS,
-        {"fake_chat_ads", DEFAULTS::d_fake_chat_xpath_ads}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_DELAY,
-        {"fake_chat_delay", DEFAULTS::d_fake_chat_delay}
-    },
-    {
-        SettingsManager::Setting::FAKE_SCREENSHOT_DELAY,
-        {"fake_screenshot_delay", DEFAULTS::d_fake_screenshot_delay}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_HIDE_HEADER,
-        {"fake_chat_hide_header", DEFAULTS::d_fake_chat_hide_header}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_HIDE_FOOTER,
-        {"fake_chat_hide_footer", DEFAULTS::d_fake_chat_hide_footer}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_HIDE_DARK_THEME,
-        {"fake_chat_hide_dark_theme", DEFAULTS::d_fake_chat_hide_dark_theme}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_HIDE_IPHONE,
-        {"fake_chat_hide_iphone", DEFAULTS::d_fake_chat_hide_iphone}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_HIDE_PERCENTAGE,
-        {"fake_chat_hide_percentage", DEFAULTS::d_fake_chat_hide_percentage}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_HIDE_PAYMENT,
-        {"fake_chat_hide_payment", DEFAULTS::d_fake_chat_hide_payment}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_HIDE_DUAL_SIM,
-        {"fake_chat_hide_dual_sim", DEFAULTS::d_fake_chat_hide_dual_sim}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_NETWORKS,
-        {"fake_chat_networks", DEFAULTS::d_fake_chat_networks}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_NETWORK,
-        {"fake_chat_network", DEFAULTS::d_fake_chat_network}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_TIME,
-        {"fake_chat_time", DEFAULTS::d_fake_chat_time}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_BATTERY,
-        {"fake_chat_battery", DEFAULTS::d_fake_chat_battery}
-    },
-    {
-        SettingsManager::Setting::FAKE_CHAT_NAME,
-        {"fake_chat_name", DEFAULTS::d_fake_chat_name}
-    },
-    {
-        SettingsManager::Setting::COUNT,
-        {"", QVariant()}
-    }
-};
 
 SettingsManager::SettingsManager(QObject *parent)
     : QObject(parent)
 {
     QMutexLocker locker(&this->m_mutex);
+
+    m_settings_lookup =
+    {
+        {
+            SettingsManager::Setting::WINDOW_RECT,
+            {"window_rect", QRect((QApplication::primaryScreen()->geometry().width() - DEFAULTS::d_window_width) / 2,
+                                  (QApplication::primaryScreen()->geometry().height() - DEFAULTS::d_window_height) / 2,
+                                  DEFAULTS::d_window_width,
+                                  DEFAULTS::d_window_height)}
+        },
+        {
+            SettingsManager::Setting::TRANSLATION_LANG,
+            {"translation_lang", DEFAULTS::d_translator_base_locale}
+        },
+        {
+            SettingsManager::Setting::FAKE_IMAGE_PATH,
+            {"fake_image_path", QDir(QCoreApplication::applicationDirPath()).absoluteFilePath("out")}
+        },
+        {
+            SettingsManager::Setting::FAKE_IMAGE_PREFIX,
+            {"fake_image_prefix", DEFAULTS::d_fake_image_prefix}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_PATH,
+            {"fake_chat_path", DEFAULTS::d_fake_chat_path}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_WEBSITE,
+            {"fake_chat_website", DEFAULTS::d_fake_chat_generator}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_ADS,
+            {"fake_chat_ads", DEFAULTS::d_fake_chat_xpath_ads}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_DELAY,
+            {"fake_chat_delay", DEFAULTS::d_fake_chat_delay}
+        },
+        {
+            SettingsManager::Setting::FAKE_SCREENSHOT_DELAY,
+            {"fake_screenshot_delay", DEFAULTS::d_fake_screenshot_delay}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_HIDE_HEADER,
+            {"fake_chat_hide_header", DEFAULTS::d_fake_chat_hide_header}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_HIDE_FOOTER,
+            {"fake_chat_hide_footer", DEFAULTS::d_fake_chat_hide_footer}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_HIDE_DARK_THEME,
+            {"fake_chat_hide_dark_theme", DEFAULTS::d_fake_chat_hide_dark_theme}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_HIDE_IPHONE,
+            {"fake_chat_hide_iphone", DEFAULTS::d_fake_chat_hide_iphone}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_HIDE_PERCENTAGE,
+            {"fake_chat_hide_percentage", DEFAULTS::d_fake_chat_hide_percentage}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_HIDE_PAYMENT,
+            {"fake_chat_hide_payment", DEFAULTS::d_fake_chat_hide_payment}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_HIDE_DUAL_SIM,
+            {"fake_chat_hide_dual_sim", DEFAULTS::d_fake_chat_hide_dual_sim}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_NETWORKS,
+            {"fake_chat_networks", DEFAULTS::d_fake_chat_networks}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_NETWORK,
+            {"fake_chat_network", DEFAULTS::d_fake_chat_network}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_TIME,
+            {"fake_chat_time", DEFAULTS::d_fake_chat_time}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_BATTERY,
+            {"fake_chat_battery", DEFAULTS::d_fake_chat_battery}
+        },
+        {
+            SettingsManager::Setting::FAKE_CHAT_NAME,
+            {"fake_chat_name", DEFAULTS::d_fake_chat_name}
+        },
+        {
+            SettingsManager::Setting::COUNT,
+            {"", QVariant()}
+        }
+    };
 
     QCoreApplication::setOrganizationName(DEFAULTS::d_organization_name);
     QCoreApplication::setOrganizationDomain(DEFAULTS::d_organization_website);

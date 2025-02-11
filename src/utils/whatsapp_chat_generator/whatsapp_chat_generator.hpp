@@ -66,6 +66,7 @@ private:
     void setPowerString(const QString& power);
     void setNetworkString(const QString& network);
     void setTitleString(const QString& title);
+    void openPreview();
 
 private:
     QWebEngineView *m_web_view;

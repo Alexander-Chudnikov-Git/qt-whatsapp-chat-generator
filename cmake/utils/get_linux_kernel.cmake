@@ -12,11 +12,24 @@ if(OS_RELEASE_RESULT)
     set(CMAKE_SYSTEM_ID "unknown")
 endif()
 
-# Print each variable for verification
 message(STATUS "Kernel Name:       ${CMAKE_SYSTEM_NAME}")
 message(STATUS "Kernel Version:    ${CMAKE_SYSTEM_VERSION}")
 message(STATUS "Kernel ID:         ${CMAKE_SYSTEM_ID}")
 message(STATUS "Processor:         ${CMAKE_SYSTEM_PROCESSOR}")
+
+execute_process(
+    COMMAND bash -c "echo $XDG_CURRENT_DESKTOP $DESKTOP_SESSION $XDG_SESSION_DESKTOP $GDMSESSION"
+    OUTPUT_VARIABLE WM_ENV
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+if ("${WM_ENV}" MATCHES ".*bspwm.*|.*i3.*|.*awesome.*|.*dwm.*|.*xmonad.*|.*herbstluftwm.*|.*qtile.*|.*spectrwm.*")
+    message(STATUS "Detected a tiling window manager")
+    set(CMAKE_SYSTEM_TILING 1)
+else()
+    message(STATUS "No tiling window manager detected")
+    set(CMAKE_SYSTEM_TILING 0)
+endif()
 
 if("${CMAKE_SYSTEM_ID}" STREQUAL "arch")
     message(STATUS "Oh, I see, you are the arch linux enjoyer after all :3")

@@ -5,11 +5,6 @@ include(cmake/utils/list_all_subdirectories.cmake)
 
 message(STATUS "CXX compiler:      ${CMAKE_CXX_COMPILER_ID}")
 
-if(NOT CMAKE_RELEASE)
-	set(CMAKE_CXX_FLAGS    "${CMAKE_CXX_FLAGS} -g")
-    set(CMAKE_LINKER_FLAGS "${CMAKE_LINKER_FLAGS}")
-endif()
-
 # [SOURCE DIRECTORIES]
 set(PROJECT_MAIN_SRC_DIR   "${CMAKE_SOURCE_DIR}/src")
 
@@ -69,14 +64,13 @@ else()
     # Implement later
 endif()
 
-# [THREAD FIX]
-list(APPEND PROJECT_LIBRARIES_LIST pthread)
-
 # [TARGET LNKING]
 target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_INCLUDE_DIRS})
 target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_DIRECTORIES_LIST})
 target_link_directories(${PROJECT_NAME}    PRIVATE ${PROJECT_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME}      PRIVATE ${PROJECT_LIBRARIES_LIST})
+
+target_compile_definitions(${PROJECT_NAME} PRIVATE SYSTEM_IS_TILING="${CMAKE_SYSTEM_TILING}")
 
 # [SOURCE GROUPS]
 source_group("Main"         FILES ${PROJECT_MAIN_SRC_FILES})

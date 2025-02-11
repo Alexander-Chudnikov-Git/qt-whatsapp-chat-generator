@@ -32,7 +32,7 @@ constexpr auto d_translator_base_dir    = ":/i18n/";
 constexpr auto d_translator_base_locale = "en_GB";
 constexpr auto d_translator_base_format = ".qm";
 
-const     auto        d_fake_image_path     = QDir(QCoreApplication::applicationDirPath()).absoluteFilePath("out");
+const     auto        d_fake_image_path     = "";
 constexpr auto        d_fake_image_prefix   = "chat_%1_%2.png";
 
 constexpr auto        d_fake_chat_path      = "";
@@ -54,7 +54,7 @@ constexpr auto        d_fake_chat_battery  = "17";
 constexpr auto        d_fake_chat_name     = "Group Chat";
 
 constexpr auto d_fake_chat_delay       = 150;
-constexpr auto d_fake_screenshot_delay = 150;
+constexpr auto d_fake_screenshot_delay = 200;
 }
 }
 #endif // DEFAULT_HPP

@@ -20,8 +20,7 @@ set(PROJECT_DEVELOPER_EMAIL      "admin@redline-software.moscow" CACHE STRING "D
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-option(CMAKE_RELEASE      "Enable release build"   OFF)
-option(CMAKE_UPX_COMPRESS "Enable UPX compression" OFF)
+option(CMAKE_UPX_COMPRESS "Enable UPX compression" ON)
 
 option(PROJECT_BUILD_DOCS     "Build project documentation" OFF)
 option(PROJECT_BUILD_TESTS    "Build project tests"         OFF)

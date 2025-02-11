@@ -17,7 +17,9 @@ WhatsappChatGenerator::WhatsappChatGenerator(QObject *parent) :
     m_web_page(new QWebEnginePage)
 {
     this->m_web_view->setPage(m_web_page);
-    this->m_web_view->resize(800, 600);
+    this->m_web_view->setFixedSize(600, 900);
+    this->m_web_view->move(0, 0);
+    this->m_web_view->setWindowFlags(Qt::SplashScreen | Qt::CustomizeWindowHint | Qt::WindowStaysOnTopHint);
 
     // Load website once
     connect(m_web_page, &QWebEnginePage::loadFinished, this, [this](bool success)
@@ -164,7 +166,9 @@ void WhatsappChatGenerator::processNextMessage()
 
         QTimer::singleShot(500, this, [this]()
         {
-            clickXPathElement("//*[@id=\"preview\"]");
+            //clickXPathElement("//*[@id=\"preview\"]"); // Windows sucks ass on clicking
+            openPreview();
+
             QTimer::singleShot(500, this, [this]()
             {
                 takeScreenshot();
@@ -242,7 +246,6 @@ void WhatsappChatGenerator::takeScreenshot()
                     spdlog::error(tr("takescreenshot_js_dims_not_int"));
                     return;
                 }
-
 
                 QRect rect(x, y, width, height);
 
@@ -859,6 +862,25 @@ void WhatsappChatGenerator::setTitleString(const QString& title)
             element.textContent = "%1";
         }
     )").arg(title);
+
+    this->m_web_page->runJavaScript(script);
+}
+
+void WhatsappChatGenerator::openPreview()
+{
+    emit generatorStatus(tr("open_preview_info"));
+    spdlog::info(tr("open_preview_info"));
+
+    QString script = QString(R"(
+        $('body').addClass('body-fixed');
+        $(this).attr("disabled", "disabled");
+        $html = ($('#download').html()).replace(/\onclick/g, 'data-onclick');
+        $html = ($html).replace(/\data-target/g, 'data-t');
+        $('#preview-modal-content').html($html);
+        jQuery("#preview-modal .fa.fa-pencil,#preview-modal .fa.fa-cloud-upload,#preview-modal .fa.fa-times-circle,#preview-modal .btn-remove").remove();
+        $('#preview-modal').show();
+        jQuery("#preview-modal .all_footer_wp").removeAttr('data-target')
+    )");
 
     this->m_web_page->runJavaScript(script);
 }

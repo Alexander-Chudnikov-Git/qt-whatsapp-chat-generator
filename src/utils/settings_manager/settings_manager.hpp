@@ -59,7 +59,7 @@ private:
 private:
     static SettingsManager* m_instance;
     static QMutex m_mutex;
-    static const QMap<SettingsManager::Setting, QPair<QString, QVariant>> m_settings_lookup;
+    QMap<SettingsManager::Setting, QPair<QString, QVariant>> m_settings_lookup;
 
     QSettings* m_settings;
     QMap<QString, QVariant> m_changed_settings;
