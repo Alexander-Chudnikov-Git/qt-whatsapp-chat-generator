@@ -61,10 +61,10 @@ endif()
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_standard_project_setup(I18N_TRANSLATED_LANGUAGES en)
     set_property(DIRECTORY ${CMAKE_SOURCE_DIR} PROPERTY QT_EXCLUDE_FROM_TRANSLATION ON)
-    qt_add_translations(${PROJECT_NAME} TS_FILES ${PROJECT_TS_FILES} ${PROJECT_TRANSLATION_TARGETS})
+    qt_add_translations(${PROJECT_NAME} TS_FILES ${PROJECT_TS_FILES} SOURCE_TARGETS ${PROJECT_TRANSLATION_TARGETS})
     add_dependencies(${PROJECT_NAME} update_translations)
 
-    qt_add_resources(${PROJECT_NAME} PREFIX "/" ${PROJECT_QRC_FILES})
+    qt_add_resources(${PROJECT_NAME} ${PROJECT_QRC_FILES})
 else()
     # Implement later
 endif()
