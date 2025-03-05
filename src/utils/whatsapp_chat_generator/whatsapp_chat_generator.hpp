@@ -17,6 +17,7 @@ class WhatsappChatGenerator : public QObject
 	Q_OBJECT
 public:
 	explicit WhatsappChatGenerator(QObject* parent = nullptr);
+	~WhatsappChatGenerator();
 
 	bool		  generateChat(const QList<WhatsappMessage>& messages);
 	QList<QImage> getGeneratorResult() const;
@@ -28,6 +29,9 @@ signals:
 	void generatorStatus(const QString& message);
 	void generatorDone();
 	void generatorError();
+
+public slots:
+	void cleanup();
 
 private slots:
 	void takeScreenshot();

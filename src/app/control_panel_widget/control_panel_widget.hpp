@@ -4,6 +4,7 @@
 #include "whatsapp_chat_generator.hpp"
 #include "whatsapp_chat_parser.hpp"
 
+#include <QCloseEvent>
 #include <QWidget>
 
 class QGridLayout;
@@ -38,6 +39,9 @@ private slots:
 
 signals:
 	void parsingStatus(const QString &message);
+
+protected:
+	void closeEvent(QCloseEvent *event);
 
 private:
 	QGridLayout *m_main_layout;

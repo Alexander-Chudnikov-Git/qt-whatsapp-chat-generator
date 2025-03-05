@@ -411,4 +411,11 @@ void ControlPanelWidget::onRunClicked()
 		},
 		Qt::SingleShotConnection);
 }
+
+void ControlPanelWidget::closeEvent(QCloseEvent *event)
+{
+	m_chat_generator->cleanup();
+	event->accept();
+}
+
 } // namespace APP

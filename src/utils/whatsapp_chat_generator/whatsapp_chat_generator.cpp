@@ -10,6 +10,7 @@
 
 namespace UTILS
 {
+
 WhatsappChatGenerator::WhatsappChatGenerator(QObject* parent) :
 	QObject(parent),
 	m_web_view(new QWebEngineView),
@@ -115,6 +116,11 @@ WhatsappChatGenerator::WhatsappChatGenerator(QObject* parent) :
 			}
 		});
 	});
+}
+
+WhatsappChatGenerator::~WhatsappChatGenerator()
+{
+	cleanup();
 }
 
 void WhatsappChatGenerator::showBrowser()
@@ -892,6 +898,24 @@ void WhatsappChatGenerator::openPreview()
 QList<QImage> WhatsappChatGenerator::getGeneratorResult() const
 {
 	return m_chat_screenshots;
+}
+
+void WhatsappChatGenerator::cleanup()
+{
+	if (this->m_web_page)
+	{
+		spdlog::info(tr("cleanup_web_page"));
+		this->m_web_page->deleteLater();
+		this->m_web_page = nullptr;
+	}
+	if (this->m_web_view)
+	{
+		spdlog::info(tr("cleanup_web_view"));
+		this->m_web_view->deleteLater();
+		this->m_web_view = nullptr;
+	}
+
+	deleteLater();
 }
 
 } // namespace UTILS

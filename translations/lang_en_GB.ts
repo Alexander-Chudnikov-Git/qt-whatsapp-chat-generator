@@ -284,277 +284,277 @@
 <context>
     <name>UTILS::WhatsappChatGenerator</name>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="29"/>
         <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="30"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="31"/>
         <source>webpage_loaded_info</source>
         <translation>Webpage loaded successfully.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="113"/>
         <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="114"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="115"/>
         <source>webpage_failed_to_load_info</source>
         <translation>Webpage failed to load.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="134"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="135"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="140"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="141"/>
         <source>no_messages_processed_info</source>
         <translation>No messages processed.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="148"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="149"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="154"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="155"/>
         <source>loading_website_info %1</source>
         <translation>Loading website: %1</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="157"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="158"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="163"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="164"/>
         <source>messages_processed_info</source>
         <translation>Messages processed successfully.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="212"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="218"/>
         <source>takescreenshot_js_invalid_result</source>
         <translation>JavaScript screenshot function returned invalid result.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="231"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="237"/>
         <source>takescreenshot_js_missing_dims</source>
         <translation>JavaScript screenshot function missing dimensions.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="244"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="250"/>
         <source>takescreenshot_js_dims_not_int</source>
         <translation>JavaScript screenshot function dimensions are not integers.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="260"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="266"/>
         <source>failed_grab_screenshot</source>
         <translation>Failed to grab screenshot.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="268"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="274"/>
         <source>failed_crop_screenshot</source>
         <translation>Failed to crop screenshot.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="274"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="275"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="280"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="281"/>
         <source>screenshot_taken_info</source>
         <translation>Screenshot taken successfully.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="290"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="296"/>
         <source>checking_scroll_pos</source>
         <translation>Checking scroll position.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="319"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="325"/>
         <source>checkscroll_js_invalid_result</source>
         <translation>JavaScript scroll check function returned invalid result.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="320"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="331"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="353"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="326"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="337"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="359"/>
         <source>screenshots_processing_error</source>
         <translation>Error processing screenshots.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="337"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="343"/>
         <source>scrolled_taking_next_screenshot</source>
         <translation>Scrolled, taking next screenshot.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="344"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="350"/>
         <source>screenshots_processed</source>
         <translation>Screenshots processed successfully.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="345"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="346"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="351"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="352"/>
         <source>screenshots_processed_info</source>
         <translation>Screenshots processed.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="597"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="598"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="603"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="604"/>
         <source>hide_header_info</source>
         <translation>Hiding header.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="610"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="611"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="616"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="617"/>
         <source>show_header_info</source>
         <translation>Showing header.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="623"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="624"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="629"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="630"/>
         <source>hide_footer_info</source>
         <translation>Hiding footer.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="635"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="636"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="641"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="642"/>
         <source>hide_doublesim_info</source>
         <translation>Hiding dual SIM icon.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="647"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="648"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="653"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="654"/>
         <source>show_doublesim_info</source>
         <translation>Showing dual SIM icon.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="659"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="660"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="665"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="666"/>
         <source>hide_percentage_info</source>
         <translation>Hiding percentage.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="671"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="672"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="677"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="678"/>
         <source>show_percentage_info</source>
         <translation>Showing percentage.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="683"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="684"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="689"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="690"/>
         <source>hide_money_info</source>
         <translation>Hiding payment icon.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="695"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="696"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="701"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="702"/>
         <source>show_money_info</source>
         <translation>Showing payment icon.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="707"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="708"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="713"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="714"/>
         <source>show_footer_info</source>
         <translation>Showing footer.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="719"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="720"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="725"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="726"/>
         <source>set_dark_theme_info</source>
         <translation>Setting dark theme.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="733"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="734"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="739"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="740"/>
         <source>set_light_theme_info</source>
         <translation>Setting light theme.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="747"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="748"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="753"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="754"/>
         <source>set_iphone_layout_info</source>
         <translation>Setting iPhone layout.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="769"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="770"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="775"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="776"/>
         <source>set_android_layout_info</source>
         <translation>Setting Android layout.</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="790"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="791"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="796"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="797"/>
         <source>set_time_info %1</source>
         <translation>Setting time to: %1</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="803"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="804"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="809"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="810"/>
         <source>set_power_info %1</source>
         <translation>Setting battery to: %1%</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="836"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="837"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="842"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="843"/>
         <source>set_network_info %1</source>
         <translation>Setting network to: %1</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="850"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="851"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="856"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="857"/>
         <source>set_title_info %1</source>
         <translation>Setting title to: %1</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="875"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="876"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="881"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="882"/>
         <source>open_preview_info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="223"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="229"/>
         <source>takescreenshot_js_error %1</source>
         <translation>JavaScript screenshot function error: %1</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="252"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="258"/>
         <source>invalid_chat_dims %1 %2</source>
         <translation>Invalid chat dimensions: %1 x %2</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="282"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="288"/>
         <source>takescreenshot_js_unexpected_type %1</source>
         <translation>JavaScript screenshot function returned unexpected type: %1</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="330"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="336"/>
         <source>checkscroll_js_error %1</source>
         <translation>JavaScript scroll check function error: %1</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="352"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="358"/>
         <source>checkscroll_js_unexpected_type %1</source>
         <translation>JavaScript scroll check function returned unexpected type: %1</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="360"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="361"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="366"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="367"/>
         <source>class_removed_info %1</source>
         <translation>Class removed: %1</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="370"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="371"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="376"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="377"/>
         <source>id_removed_info %1</source>
         <translation>ID removed: %1</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="380"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="381"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="386"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="387"/>
         <source>xpath_removed_info %1</source>
         <translation>XPath removed: %1</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="412"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="413"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="418"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="419"/>
         <source>xpath_clicked_info %1</source>
         <translation>XPath clicked: %1</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="437"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="438"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="443"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="444"/>
         <source>storage_item_set_info %1 %2</source>
         <translation>Storage item set: %1, value: %2</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="453"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="454"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="459"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="460"/>
         <source>delete_message_info %1</source>
         <translation>Message deleted: %1</translation>
     </message>
     <message>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="466"/>
-        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="467"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="472"/>
+        <location filename="../src/utils/whatsapp_chat_generator/whatsapp_chat_generator.cpp" line="473"/>
         <source>add_message_info %1</source>
         <translation>Message added: %1</translation>
     </message>
