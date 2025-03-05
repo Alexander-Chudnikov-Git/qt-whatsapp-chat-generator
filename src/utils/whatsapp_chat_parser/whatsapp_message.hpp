@@ -1,53 +1,55 @@
 #ifndef WHATSAPP_MESSAGE_HPP
 #define WHATSAPP_MESSAGE_HPP
 
-#include <QString>
 #include <QDateTime>
+#include <QString>
 #include <QVariant>
-
 
 namespace UTILS
 {
 class WhatsappMessage : public QObject
 {
-    Q_OBJECT
+	Q_OBJECT
 public:
-    enum class Type
-    {
-        Inbound,
-        Outbound
-    };
+	enum class Type
+	{
+		Inbound,
+		Outbound
+	};
 
-    WhatsappMessage(Type type = Type::Inbound, const QString& text = "", const QDateTime& date_time = QDateTime(), const QString& reply_uuid = "");
-    WhatsappMessage(const WhatsappMessage& other);
+	WhatsappMessage(Type			 type		= Type::Inbound,
+					const QString&	 text		= "",
+					const QDateTime& date_time	= QDateTime(),
+					const QString&	 reply_uuid = "");
+	WhatsappMessage(const WhatsappMessage& other);
 
-    WhatsappMessage& operator=(const WhatsappMessage& other);
+	WhatsappMessage& operator=(const WhatsappMessage& other);
 
-    Type getType() const;
-    QString getText() const;
-    QDateTime getDateTime() const;
-    QString getUUID() const;
-    QString getReplyUUID() const;
+	Type	  getType() const;
+	QString	  getText() const;
+	QDateTime getDateTime() const;
+	QString	  getUUID() const;
+	QString	  getReplyUUID() const;
 
-    void setType(Type type);
-    void setText(const QString& text);
-    void setDateTime(const QDateTime& date_time);
-    void setReplyUUID(const QString& reply_uuid);
+	void setType(Type type);
+	void setText(const QString& text);
+	void setDateTime(const QDateTime& date_time);
+	void setReplyUUID(const QString& reply_uuid);
 
-    QString typeToString() const;
+	QString typeToString() const;
 
-    bool operator<(const WhatsappMessage& other) const;
+	bool operator<(const WhatsappMessage& other) const;
 
-    void printDebugInfo() const;
+	void printDebugInfo() const;
 
 private:
-    Type m_type;
-    QString m_text;
-    QDateTime m_date_time;
+	Type	  m_type;
+	QString	  m_text;
+	QDateTime m_date_time;
 
-    QString m_uuid;
-    QString m_reply_uuid;
+	QString m_uuid;
+	QString m_reply_uuid;
 };
-}
+} // namespace UTILS
 
 #endif // WHATSAPP_MESSAGE_HPP

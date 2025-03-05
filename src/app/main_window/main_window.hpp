@@ -13,38 +13,38 @@ namespace APP
 {
 class ControlPanelWidget;
 class ConsolePanelWidget;
-}
+} // namespace APPF
 
 namespace APP
 {
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    explicit  MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+	explicit MainWindow(QWidget *parent = nullptr);
+	~MainWindow();
 
 private:
-    void initialize();
-    void setupUi();
-    void setupStyle();
-    void setupConnections();
+	void initialize();
+	void setupUi();
+	void setupStyle();
+	void setupConnections();
 
-    void saveWindowRect();
-    
-private:
-    void moveEvent(QMoveEvent *event) override;
-    void resizeEvent(QResizeEvent *event) override;
+	void saveWindowRect();
 
 private:
-    QGridLayout *m_main_layout;
-    QSplitter *m_splitter;
+	void moveEvent(QMoveEvent *event) override;
+	void resizeEvent(QResizeEvent *event) override;
 
-    ControlPanelWidget *m_control_panel;
-    ConsolePanelWidget *m_console_panel;
+private:
+	QGridLayout *m_main_layout;
+	QSplitter	*m_splitter;
 
-    QTimer *m_move_resize_timer;
+	ControlPanelWidget *m_control_panel;
+	ConsolePanelWidget *m_console_panel;
+
+	QTimer *m_move_resize_timer;
 };
-}
+} // namespace APP
 #endif // MAINWINDOW_HPP

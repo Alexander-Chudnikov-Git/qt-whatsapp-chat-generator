@@ -48,10 +48,12 @@ list(APPEND PROJECT_LIBRARIES_LIST pthread)
 set(PROJECT_INSTALL_DIR "${CMAKE_SOURCE_DIR}/res/install/linux/")
 
 # [EXECUTABLE]
-if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(${PROJECT_NAME} MANUAL_FINALIZATION ${PROJECT_MAIN_SRC_FILES})
-else()
-    add_executable(${PROJECT_NAME} ${PROJECT_MAIN_SRC_FILES} ${PROJECT_QRCS_FILES} ${PROJECT_QM_FILES})
+if(NOT TARGET ${PROJECT_NAME})
+    if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
+        qt_add_executable(${PROJECT_NAME} MANUAL_FINALIZATION ${PROJECT_MAIN_SRC_FILES})
+    else()
+        add_executable(${PROJECT_NAME} ${PROJECT_MAIN_SRC_FILES} ${PROJECT_QRCS_FILES} ${PROJECT_QM_FILES})
+    endif()
 endif()
 
 # [INSTALLATION]
@@ -64,7 +66,8 @@ install(TARGETS ${PROJECT_NAME}
 install(FILES ${PROJECT_INSTALL_DIR}/desktop/qt-ukr-categorizer-client.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
 install(DIRECTORY ${PROJECT_INSTALL_DIR}/icons/ DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor)
 
-if(${QT_VERSION_MAJOR} EQUAL 6)
-    qt_finalize_executable(${PROJECT_NAME})
+if(NOT TARGET ${PROJECT_NAME})
+    if(${QT_VERSION_MAJOR} EQUAL 6)
+        qt_finalize_executable(${PROJECT_NAME})
+    endif()
 endif()
-

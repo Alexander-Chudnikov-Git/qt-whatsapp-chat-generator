@@ -23,7 +23,7 @@ execute_process(
     OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
-if ("${WM_ENV}" MATCHES ".*bspwm.*|.*i3.*|.*awesome.*|.*dwm.*|.*xmonad.*|.*herbstluftwm.*|.*qtile.*|.*spectrwm.*")
+if ("${WM_ENV}" MATCHES ".*bspwm.*|.*i3.*|.*awesome.*|.*dwm.*|.*xmonad.*|.*herbstluftwm.*|.*qtile.*|.*spectrwm.*|.*Hyprland.*")
     message(STATUS "Detected a tiling window manager")
     set(CMAKE_SYSTEM_TILING 1)
 else()
